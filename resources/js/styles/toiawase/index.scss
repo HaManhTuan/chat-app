@@ -1,0 +1,160 @@
+#duplicateDialog::v-deep {
+    overflow: hidden;
+    top: -60px;
+    th input {
+        display: none;
+    }
+
+    .header-div {
+        display: flex;
+        justify-content: space-between;
+        .title-header {
+            padding-left: 74px;
+            padding-top: 25px;
+            font-size: 20px;
+        }
+        .el-icon-close{
+            font-size: 32px;
+            cursor: pointer;
+            margin-left: 6px;
+        }
+    }
+    .el-dialog {
+        border-radius: 25px;
+    }
+
+    .el-dialog__header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .el-dialog__body {
+        padding-top: 0;
+        padding-left: 74px;
+        padding-right: 75px;
+    }
+
+    .el-table__header {
+        .el-checkbox__inner {
+            display: none;
+        }
+    }
+    .el-checkbox__inner {
+        width: 19px;
+        height: 19px;
+        border: 1px solid #1a1714;
+    }
+    .el-checkbox__inner::after{
+        height: 10px;
+        left: 6px;
+    }
+}
+
+.card-body__content::v-deep {
+    .el-table {
+        .cell {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .table-duplicate {
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+        border-top: 1px solid #d6d6d6;
+        border-bottom: 1px solid #d6d6d6;
+
+        &:before {
+            display: none;
+        }
+
+        table {
+            th {
+                color: #FFFFFF;
+                padding: 0 20px;
+                height: 30px;
+                background: #535353;
+                border-bottom: 1px solid #d6d6d6;
+                font-size: 13px;
+                font-family: 'Noto Sans JP', sans-serif;
+                font-weight: 600;
+            }
+
+            td {
+                border-bottom: 1px solid #d6d6d6;
+                padding: 8px 10px 7px 20px;
+                font-size: 14px;
+            }
+
+            button.btn-edit, button.btn-delete {
+                background: #f4f8fd;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                padding: 0;
+                border: none;
+                margin-right: 10px;
+                color: #1467b3;
+                vertical-align: middle;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            button.btn-delete {
+                svg {
+                    width: 16px;
+                    height: 16px;
+
+                    svg {
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+.dialog-footer ::v-deep{
+    button {
+        border-radius: 25px !important;
+        min-width: 145px;
+        height: 45px;
+        color: white;
+        border: 1px solid unset;
+        font-size: 15px;
+        svg {
+            font-size: 21px;
+            vertical-align: -6px;
+        }
+    }
+    .close-button{
+        background-color: #6A6A6A;
+
+        .el-icon-circle-close{
+            font-size: 20px;
+            vertical-align: -2px;
+        }
+        span{
+            .el-icon-circle-close::before{
+                color:white !important;
+            }
+        }
+    }
+    .register-same{
+        background-color: #c70000 !important;
+        border-color: unset !important;
+    }
+    .register-other{
+        background-color: #1467b3;
+        border-color: unset !important;
+    }
+    .el-button:hover, .el-button:focus{
+        border-color: unset;
+    }
+}

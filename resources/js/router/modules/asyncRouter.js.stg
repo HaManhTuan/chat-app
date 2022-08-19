@@ -1,0 +1,611 @@
+import Layout from '@/layout';
+import contractSubjectMstRoutes from './contractSubjectMst';
+import subjectSet from './subjectSet';
+import targetPeriodRoutes from './targetPeriod';
+
+const asyncRounter = [
+  //   {
+  //     path: '/approval',
+  //     component: Layout,
+  //     children: [
+  //       {
+  //         path: '',
+  //         component: () =>
+  //           import('@/views/approval-notification/notification/Index'),
+  //         name: 'approval',
+  //         meta: {
+  //           title: '承認一覧',
+  //           icon: 'dashboard',
+  //           noCache: false,
+  //         },
+  //       },
+  //     ],
+  //   },
+  {
+    path: '/toiawase',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/toiawase/index'),
+        name: 'toiawase-index',
+        meta: {
+          title: '入会前の問合せ',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+      {
+        path: 'create',
+        component: () => import('@/views/toiawase/detail'),
+        name: 'toiawase-create',
+        hidden: true,
+        meta: {
+          title: '入会前の問合せ詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+      {
+        path: 'detail/:id(\\d+)',
+        component: () => import('@/views/toiawase/detail'),
+        name: 'toiawase-detail',
+        hidden: true,
+        meta: {
+          title: '入会前の問合せ詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/register-trial',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/register-trial/Index'),
+        name: 'RegisterTrial',
+        meta: {
+          title: '体験登録',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/learning-trial',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/learning-trial/Index'),
+        name: 'LearningTrial',
+        meta: {
+          title: '体験結果更新',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/registration-school',
+    component: Layout,
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/school/Registration'),
+        name: 'registration-school',
+        meta: { title: '直入会', icon: 'dashboard', noCache: false },
+      },
+    ],
+  },
+  {
+    path: '/session-training',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/session-traning/List'),
+        name: 'SessionTraining',
+        meta: { title: '季節講習', noCache: false },
+      },
+    ],
+  },
+  {
+    path: '/register-other',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/register-other/List'),
+        name: 'register-other',
+        meta: { title: 'その他', icon: 'dashboard', noCache: false },
+      },
+    ],
+  },
+  {
+    path: '/student',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/Student/index'),
+        name: 'StudentList',
+        meta: { title: '生徒情報', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'form',
+        component: () => import('@/views/Student/Detail'),
+        name: 'StudentCreate',
+        hidden: true,
+        meta: {
+          title: '生徒情報詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/Student/Detail'),
+        name: 'StudentDetail',
+        hidden: true,
+        meta: {
+          title: '生徒情報詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/brother-information',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'add/:id',
+        component: () => import('@/views/BrotherInformation/Regis'),
+        name: 'BrotherInformationAdd',
+        hidden: true,
+        meta: {
+          title: '兄弟情報',
+          noCache: false,
+        },
+      },
+      {
+        path: 'edit/:id(\\d+)',
+        component: () => import('@/views/BrotherInformation/Regis'),
+        name: 'BrotherInformationEdit',
+        hidden: true,
+        meta: {
+          title: '兄弟情報',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/search',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/Student/StudentSearch'),
+        name: 'Student.Search',
+        hidden: true,
+        meta: { title: '生徒検索結果', noCache: true },
+      },
+    ],
+  },
+  {
+    path: '/cantractinfo',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/cantractinfo/index'),
+        name: 'cantractinfo-index',
+        meta: {
+          title: '受講情報',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/cantractinfo/detail'),
+        name: 'cantractinfo-detail',
+        hidden: true,
+        meta: {
+          title: '受講情報詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/actions',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/action'),
+        name: 'actions',
+        meta: { title: '対応履歴', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'add/',
+        component: () => import('@/views/action/detail'),
+        name: 'actions-add',
+        hidden: true,
+        meta: {
+          title: '対応履歴詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+      {
+        path: 'detail/:id(\\d+)',
+        component: () => import('@/views/action/detail'),
+        name: 'actions-detail',
+        hidden: true,
+        meta: {
+          title: '対応履歴詳細',
+          icon: 'dashboard',
+          noCache: false,
+        },
+      },
+    ],
+  },
+  {
+    path: '/introductions',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/introduction/index'),
+        name: 'introductions',
+        meta: { title: '紹介', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'form/add',
+        component: () => import('@/views/introduction/details/index'),
+        name: 'introductions-detail-add',
+        meta: { title: '紹介詳細', icon: 'dashboard', noCache: false },
+        hidden: true,
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/introduction/details/index'),
+        name: 'introductions-detail',
+        meta: { title: '紹介詳細', icon: 'dashboard', noCache: false },
+        hidden: true,
+      },
+    ],
+  },
+  {
+    path: '/student-record',
+    component: Layout,
+    meta: { title: '学校内申' },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/student-record/Index'),
+        name: 'student_record',
+        meta: { title: '学校内申', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/student-record/Form'),
+        name: 'student_record_detail',
+        meta: { title: '学校内申詳細', icon: 'dashboard', noCache: false },
+        hidden: true,
+      },
+    ],
+  },
+  {
+    path: '/school-test',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/school-test-result/List'),
+        name: 'SchoolTest',
+        meta: { title: '学校試験', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () =>
+          import('@/views/school-test-result/detail/SchoolTestResultDetail'),
+        name: 'confirm-school-test',
+        hidden: true,
+        meta: { title: '学校試験詳細', noCache: true },
+      },
+    ],
+  },
+  {
+    path: '/internal-test',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/internal-test-school/List'),
+        name: 'List',
+        meta: { title: '塾内テスト', icon: 'dashboard', noCache: false },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/internal-test-school/detail/detail'),
+        name: 'confirm-internal-test',
+        meta: { title: '塾内テスト詳細', noCache: true },
+        hidden: true,
+      },
+    ],
+  },
+  {
+    path: '/upgrade-school-year',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/upgrade-school-year/Index'),
+        name: 'UpgradeSchoolYear',
+        meta: { title: '更新有無', noCache: false },
+      },
+    ],
+  },
+  {
+    path: '/import',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/import/index'),
+        name: 'Import',
+        meta: { title: 'インポート', noCache: false },
+      },
+    ],
+  },
+  {
+    path: '/course',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/course/index'),
+        name: 'Course',
+        meta: { title: '開講コース', noCache: false, roles: ['system'] },
+        accessUrl: '/course',
+      },
+    ],
+  },
+  subjectSet,
+  contractSubjectMstRoutes,
+  // {
+  //   path: '/calendar',
+  //   component: Layout,
+  //   meta: { roles: ['system'] },
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('@/templates/dashboard/index'),
+  //       name: 'Calendar',
+  //       meta: {
+  //         title: 'カレンダーパターン',
+  //         noCache: false,
+  //       },
+  //     },
+  //   ],
+  // },
+  {
+    path: '/discount',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/discount/List'),
+        name: 'Discount',
+        meta: { title: '割引管理', noCache: false, roles: ['system'] },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/discount/detail/Index'),
+        name: 'editDiscount',
+        meta: { title: '割引詳細', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+      {
+        path: 'form',
+        component: () => import('@/views/discount/detail/Index'),
+        name: 'DiscountCreate',
+        meta: { title: '割引詳細', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+    ],
+  },
+  // {
+  //   path: '/number-assignment',
+  //   component: Layout,
+  //   meta: { roles: ['system'] },
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('@/views/number-assignment/List'),
+  //       name: 'NumberedList',
+  //       meta: { title: '採番', noCache: true, roles: ['system'] },
+  //     },
+  //   ],
+  // },
+  {
+    path: '/school',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/school/List'),
+        name: 'School',
+        meta: { title: '学校', noCache: true, roles: ['system'] },
+      },
+      {
+        path: '/school/form',
+        hidden: true,
+        component: () => import('@/views/school/edit'),
+        name: 'SchoolCreate',
+        meta: { title: '学校詳細', noCache: false, roles: ['system'] },
+      },
+      {
+        path: '/school/form/:id',
+        hidden: true,
+        component: () => import('@/views/school/edit'),
+        name: 'SchoolEdit',
+        meta: { title: '学校詳細', noCache: false, roles: ['system'] },
+      },
+    ],
+  },
+  {
+    path: '/business-unit',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/school-test-list/List'),
+        name: 'Business',
+        meta: { title: '校舎', noCache: false, roles: ['system'] },
+      },
+      {
+        path: '/business-unit/form/:id',
+        component: () => import('@/views/school-test-list/details/index'),
+        name: 'EditBusiness',
+        hidden: true,
+        meta: { title: '校舎詳細', noCache: false, roles: ['system'] },
+      },
+      {
+        path: '/business-unit/form',
+        component: () => import('@/views/school-test-list/details/index'),
+        name: 'AddBusiness',
+        meta: { title: '校舎詳細', noCache: false, roles: ['system'] },
+        hidden: true,
+      },
+    ],
+  },
+  {
+    path: '/grade',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/grade/List'),
+        name: 'Grade',
+        meta: { title: '学年', noCache: true, roles: ['system'] },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/grade/detail/Index'),
+        name: 'editGrade',
+        meta: { title: '学年詳細', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+      {
+        path: 'form',
+        component: () => import('@/views/grade/detail/Index'),
+        name: 'GradeCreate',
+        meta: { title: '学年詳細', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+    ],
+  },
+  // {
+  //   path: '/school-group',
+  //   component: Layout,
+  //   meta: { roles: ['system'] },
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('@/templates/dashboard/index'),
+  //       name: 'SchoolGroup',
+  //       meta: { title: '学校種別', noCache: true, roles: ['system'] },
+  //     },
+  //   ],
+  // },
+  targetPeriodRoutes,
+  // {
+  //   path: '/datetime-setting',
+  //   component: Layout,
+  //   meta: { roles: ['system'] },
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('@/templates/dashboard/index'),
+  //       name: 'DatetimeSetting',
+  //       meta: { title: 'システム日付設定', noCache: true, roles: ['system'] },
+  //     },
+  //   ],
+  // },
+  {
+    path: '/user',
+    component: Layout,
+    meta: { roles: ['system'] },
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/user/List'),
+        name: 'User',
+        meta: { title: 'ユーザー一覧', noCache: true, roles: ['system'] },
+      },
+      {
+        path: 'form/:id(\\d+)',
+        component: () => import('@/views/user/detail/Index'),
+        name: 'editUser',
+        meta: { title: 'ユーザー詳細', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+      {
+        path: 'form',
+        component: () => import('@/views/user/detail/Index'),
+        name: 'UserCreate',
+        meta: { title: 'ユーザー一覧', noCache: true, roles: ['system'] },
+        hidden: true,
+      },
+    ],
+  },
+  // {
+  //   path: '/organization-list',
+  //   component: Layout,
+  //   meta: { roles: ['system'] },
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: () => import('@/views/organization-list/index'),
+  //       name: 'OrganizationList',
+  //       meta: { title: '組織一覧', noCache: true, roles: ['system'] },
+  //     },
+  //   ],
+  // },
+  {
+    path: '/cantract-info-history',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/cantract-info-history/detail/:id(\\d+)',
+        component: () => import('@/views/cantractinfo-history/history'),
+        name: 'cantractinfo-history',
+        hidden: true,
+        meta: { title: '受講変更履歴詳細', noCache: false },
+      },
+    ],
+  },
+  { path: '*', redirect: '/404', hidden: true },
+];
+
+export default asyncRounter;

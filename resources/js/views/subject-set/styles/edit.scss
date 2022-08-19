@@ -1,0 +1,175 @@
+/deep/ .select-inside-table {
+    width: 100%;
+
+    .el-scrollbar__wrap {
+        overflow: scroll !important;
+    }
+}
+
+/deep/ .el-checkbox__inner {
+    background: none;
+    border: none;
+
+    &:after {
+        border-color: #1A1714;
+        border-width: 4px;
+        top: 0;
+        width: 8px;
+        height: 15px;
+        left: 0;
+        transform: rotate(45deg) scaleY(1);
+        box-sizing: content-box;
+        content: "";
+    }
+}
+
+/deep/ .el-input__inner {
+    height: 36px;
+}
+
+.tab-custom {
+    height: calc(100% - 62px);
+
+    /deep/ .el-scrollbar__view {
+        height: 100%;
+    }
+
+    /deep/ .el-tabs__content {
+        height: calc(100% - 41px);
+
+        .el-tab-pane {
+            height: 100%;
+
+            .scroll-content {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.app-container::v-deep {
+
+    .tab-custom {
+        border: none;
+        box-shadow: none;
+
+        & > .el-tabs__header {
+            background-color: #f0f0f0;
+            border: none;
+
+            .el-tabs__nav {
+                width: 100%;
+                display: flex;
+
+                .el-tabs__item.is-top {
+                    font-size: 15px;
+                    font-weight: 400;
+                    background: #898989;
+                    color: #e0e0e0;
+                    height: 43px;
+                    line-height: 43px;
+                    width: 112px;
+                    text-align: center;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border: none;
+                    padding: 0;
+
+                    &:first-child {
+                        border-top-left-radius: 8px;
+                    }
+
+                    &:hover {
+                        background: #525252;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    &.is-active {
+                        background: #ffffff;
+                        color: #1467B3;
+                        font-family: Noto Sans JP, sans-serif;
+                        font-weight: 500 !important;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            transform: translateX(-50%);
+                            width: 59px;
+                            border-bottom: 4px solid #1467B3;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .el-tabs__content {
+            padding: 0;
+        }
+
+        .card-body {
+            h3 {
+                font-size: 18px;
+                font-weight: 500 !important;
+                color: #1A1714;
+                margin: 0;
+                padding-bottom: 20px;
+                font-family: Noto Sans JP, sans-serif;
+                font-weight: normal;
+            }
+
+            padding: 20px 30px 0;
+
+            .el-col.el-col-12 {
+                padding-right: 60px;
+            }
+
+            .el-form-item__label {
+                padding: 0 10px 0 0;
+            }
+        }
+    }
+
+    .group-button {
+        display: flex;
+        justify-content: flex-end;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 17px 0 0 0;
+    }
+
+    .line {
+        border-top: 1px solid #d6d6d6;
+    }
+}
+
+// custom scroll
+.scroll-content::v-deep {
+    .el-scrollbar__wrap {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .el-scrollbar__bar {
+        &.is-vertical {
+            .el-scrollbar__thumb {
+                background: #888888;
+                width: 8px;
+                left: 0;
+                top: 0;
+
+                &:hover {
+                    background: #888888;
+                }
+            }
+        }
+
+        &.is-horizontal {
+            display: none;
+        }
+    }
+}

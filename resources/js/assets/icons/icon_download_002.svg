@@ -1,0 +1,52 @@
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="17.924"
+height="16.116"
+viewBox="0 0 17.924 16.116"
+>
+<g
+    id="_1070_dl_h"
+    data-name="1070_dl_h"
+    transform="translate(1 1)"
+>
+    <path
+    id="パス_59"
+    data-name="パス 59"
+    d="M26.923,24v5.12a1.935,1.935,0,0,1-1.917,1.954H12.916A1.935,1.935,0,0,1,11,29.089V24"
+    transform="translate(-10.999 -16.957)"
+    fill="none"
+    stroke="#c70000"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    />
+    <g
+    id="グループ_352"
+    data-name="グループ 352"
+    transform="translate(4.906)"
+    >
+    <line
+        id="線_2"
+        data-name="線 2"
+        y1="9.891"
+        transform="translate(3.056)"
+        fill="none"
+        stroke="#c70000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+    />
+    <path
+        id="パス_60"
+        data-name="パス 60"
+        d="M19.01,23.95l3.056,2.909,3.056-2.909"
+        transform="translate(-19.01 -16.938)"
+        fill="none"
+        stroke="#c70000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+    />
+    </g>
+</g>
+</svg>

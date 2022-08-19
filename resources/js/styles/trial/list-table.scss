@@ -1,0 +1,243 @@
+.page-body {
+  /deep/ form {
+    height: calc(100% - 79px);
+  }
+}
+
+span.icon-calendar {
+  margin-left: 5px;
+}
+/deep/ .el-checkbox__input {
+  &.is-checked {
+    .el-checkbox__inner {
+      background: none;
+      &:after {
+        border-color: red;
+      }
+    }
+  }
+  .el-checkbox__inner {
+    border: 1px solid #1a1714;
+    border-radius: 2px;
+    opacity: 1;
+  }
+}
+
+/deep/ .el-select {
+  &.el-select {
+    input.el-input__inner {
+      border: none !important;
+      height: 32px;
+      line-height: 32px;
+      padding-left: 0px;
+      background: none;
+    }
+    i.el-select__caret.el-input__icon {
+      color: #ffffff !important;
+      width: 18px;
+      line-height: 32px;
+      &:before {
+        color: #fff;
+      }
+    }
+    .el-input__suffix {
+      width: 18px;
+      height: 32px;
+      background: #769fc6;
+      border-radius: 3px;
+    }
+    span.el-input__suffix-inner {
+      opacity: 1;
+    }
+    .el-select .el-input .el-select__caret::before {
+      color: #fff;
+    }
+  }
+}
+.footer__group {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+  justify-content: space-between;
+}
+/deep/ .custom-pagination {
+  text-align: center;
+  margin: 0;
+  height: 60px;
+  background-color: #f0f0f0;
+
+  button.btn-prev,
+  button.btn-next {
+    background: #ffffff;
+  }
+}
+/deep/ thead {
+  th:last-child {
+    text-align: left;
+    border-left: 1px solid #d6d6d6;
+  }
+  th:first-child {
+    text-align: left;
+    border-right: 1px solid #d6d6d6;
+  }
+  .cell {
+    font-size: 14px;
+    height: 29px;
+    line-height: 29px;
+  }
+}
+
+/deep/ tbody {
+  tr {
+    td {
+      .cell {
+        height: 20px;
+        justify-content: start;
+        align-items: center;
+        .el-form-item {
+          margin: 0;
+          width: 100%;
+          .el-form-item__content {
+            line-height: 16px !important;
+            .el-input {
+              .el-input__suffix {
+                top: 0px !important;
+                  right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/deep/ tr {
+  &.el-date-table__row {
+    td {
+      border-bottom: none;
+    }
+  }
+  .cell {
+    padding: 0px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  td:not(.prev-month):not(.available):not(.disabled) {
+    &:first-child {
+      border-right: 1px solid #d6d6d6;
+    }
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(11) {
+      input {
+        font-size: 14px;
+      }
+    }
+    &:last-child {
+      text-align: center;
+      border-left: 1px solid #d6d6d6;
+    }
+  }
+}
+/deep/ .group-button {
+  float: right;
+    padding-top: 0;
+  button {
+    border-radius: 100px;
+    color: #fff;
+    height: 45px;
+    min-width: 105px;
+    border-color: #707070;
+    span {
+      font-size: 15px;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+    &.btn-export {
+      background: #343434;
+      margin-right: 10px;
+    }
+
+    &.btn-create {
+      background: #1367b3;
+      width: unset;
+    }
+
+    i,
+    svg {
+      font-size: 20px;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+/deep/ .btn-edit {
+  background-color: #f4f8fd;
+}
+
+/deep/ .btn-download {
+  background-color: #faecec;
+}
+
+/deep/ .btn__action {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/deep/ .el-date-editor {
+  display: inline-block;
+  .el-input__inner {
+    border: none !important;
+    background: none !important;
+    padding: 0px !important;
+  }
+  .el-input__suffix {
+    display: none !important;
+  }
+}
+.icon-input__calendar {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  pointer-events: none;
+  background: #769fc6;
+  border-radius: 3px;
+  width: 26px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.el-select-dropdown__item {
+  max-width: none !important;
+}
+
+/deep/.select-option {
+  //max-width: 154px;
+}
+.text-center {
+  text-align: center;
+}
+/deep/.el-table__fixed-right-patch {
+  background: #535353;
+  height: 31px !important;
+}

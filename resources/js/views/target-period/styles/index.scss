@@ -1,0 +1,160 @@
+@import "@/styles/common-form";
+
+/deep/ .el-input__inner {
+    height: 36px;
+}
+
+//height: calc(100% - 152px);
+.card-body__content {
+    height: calc(100% - 169px);
+}
+
+.block-search::v-deep {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 20px 17px 20px;
+
+    .el-form-item__label {
+        padding: 0 10px 0 0;
+    }
+
+    .form-search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .div-left {
+            display: flex;
+            align-items: center;
+
+            .el-input {
+                .el-input__inner {
+                    width: 186px;
+                }
+            }
+
+            .el-select {
+                .el-input__inner {
+                    width: 174px;
+                }
+            }
+        }
+
+        .el-form-item {
+            margin-bottom: 0;
+
+            .el-form-item__label {
+                padding-left: 0 !important;
+            }
+        }
+    }
+
+    button.el-button.search-btn {
+        border: none;
+
+        svg {
+            font-size: 17px;
+        }
+    }
+}
+
+// custom paginate
+.position-center::v-deep {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+
+    button.btn-prev, button.btn-next {
+        background: #FFFFFF;
+    }
+}
+
+.form-search > > > .el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before, .el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap > .el-form-item__label:before {
+    display: none;
+}
+
+// custom table
+.card-body__content::v-deep {
+    .el-table {
+        .cell {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .my-header {
+        &:nth-child(8), &:nth-child(9) {
+            padding: 0 !important;
+        }
+    }
+
+    margin-top: 25px;
+
+    .table-content {
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+        border-top: 1px solid #d6d6d6;
+
+        &:before {
+            display: none;
+        }
+
+        table {
+            th {
+                color: #FFFFFF;
+                padding: 0 20px;
+                height: 30px;
+                background: #535353;
+                border-bottom: 1px solid #d6d6d6;
+                font-size: 13px;
+                font-family: Noto Sans JP, sans-serif;
+                font-weight: 400;
+            }
+            td {
+                border-bottom: 1px solid #d6d6d6;
+                height: 47px !important;
+                padding: 0 10px 0 20px !important;
+                font-size: 14px;
+            }
+
+            button.btn-edit, button.btn-delete {
+                background: #f4f8fd;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
+                padding: 0;
+                border: none;
+                margin-right: 10px;
+                color: #1467b3;
+                vertical-align: middle;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            button.btn-delete {
+                svg {
+                    width: 16px;
+                    height: 16px;
+
+                    svg {
+                        margin-right: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__group {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}

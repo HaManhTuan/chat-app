@@ -1,0 +1,131 @@
+@import "@/styles/common-form";
+
+.card-body__content {
+    height: calc(100% - 214px);
+}
+.group-button{
+    padding-top: 0px;
+}
+.card-body__content::v-deep .el-table .cell {
+    padding-right: 0;
+    padding-left: 3px !important;
+}
+
+/deep/ .el-input__inner {
+    height: 36px;
+}
+/deep/ .el-scrollbar__view .el-select-dropdown__list{
+    width: 170px !important;
+}
+.block-search::v-deep {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 20px 0 20px;
+
+    .form-search {
+        .el-input {
+            .el-input__inner {
+                width: 174px;
+            }
+        }
+
+        .el-select {
+            .el-input__inner {
+                width: 174px;
+            }
+        }
+
+        .div-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .div-right {
+            display: flex;
+            justify-content: space-between;
+
+            .d-left {
+                display: flex;
+            }
+
+            .d-right {
+                button {
+                    margin-top: -8px;
+                }
+            }
+        }
+
+        .el-form-item {
+            margin-bottom: 17px;
+
+            .el-form-item__label {
+                padding-left: 0 !important;
+            }
+        }
+    }
+
+}
+
+
+
+// custom table
+.card-body__content::v-deep {
+    .el-table {
+        .cell {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    margin-top: 25px;
+
+    .table-content {
+        border-left: 1px solid #d6d6d6;
+        border-right: 1px solid #d6d6d6;
+        border-top: 1px solid #d6d6d6;
+
+        &:before {
+            display: none;
+        }
+
+        table {
+            th {
+                color: #FFFFFF;
+                padding: 0 20px;
+                height: 30px;
+                background: #535353;
+                border-bottom: 1px solid #d6d6d6;
+                font-size: 13px;
+                font-family: Noto Sans JP, sans-serif;
+                font-weight: 400;
+            }
+
+            td {
+                border-bottom: 1px solid #d6d6d6;
+                padding: 8px 0px 7px 20px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/deep/ .select-inside-table {
+    .el-select-dropdown__item {
+        width: 174px;
+    }
+
+    .el-scrollbar__bar {
+        &.is-vertical {
+            .el-scrollbar__thumb {
+                background: #888888;
+                width: 8px;
+                left: 0;
+                top: 0;
+
+                &:hover {
+                    background: #888888;
+                }
+            }
+        }
+    }
+}

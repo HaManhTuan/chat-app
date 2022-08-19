@@ -1,0 +1,86 @@
+.i-small {
+  input {
+    width: 164px;
+  }
+}
+.request-year {
+  width: 524px !important;
+}
+.i-comment {
+  width: 850px;
+}
+.bt-user {
+  background-color: #1467b3;
+}
+.btn-check {
+  background-color: #c70000;
+  width: 238px !important;
+  height: 45px !important;
+  &.is-loading {
+    width: 268px !important;
+  }
+  &.is-disabled {
+    background-color: #000000;
+  }
+}
+.btn-dual {
+  position: absolute;
+  top: 31px;
+  right: 104px;
+  color: #1a1714;
+  font-size: 18px;
+}
+hr {
+  margin-bottom: 20px;
+  height: 2px;
+  background-color: #f0f0f0;
+  border: none;
+}
+/deep/ .custom-dialog {
+  overflow: hidden;
+  .el-dialog {
+    margin-top: 7vh !important;
+    height: unset;
+    width: 1060px;
+    .el-dialog__header {
+      .el-dialog__title {
+        font-weight: 500;
+      }
+    }
+    .el-dialog__body {
+      //
+    }
+    .el-dialog__footer {
+      margin-top: 0px !important;
+    }
+  }
+}
+/deep/.el-form-item__error {
+  min-width: 500px;
+}
+.input-disable {
+  width: 197px;
+  font-size: 15px;
+  background-color: #f0f0f0;
+  border: 1px #f0f0f0 solid;
+  border-radius: 6px;
+  padding-left: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+.input-link {
+  @extend .input-disable;
+  color: #1467b3;
+}
+/deep/ .el-form-item__label {
+  width: 131px;
+}
+/deep/ .el-form-item__content {
+  height: 36px !important;
+}
+
+/deep/ .el-scrollbar {
+  height: 53vh !important;
+}

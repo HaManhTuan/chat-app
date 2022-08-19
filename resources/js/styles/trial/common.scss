@@ -1,0 +1,26 @@
+.flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.align-item-center {
+  align-items: center;
+}
+/deep/.el-form-item.is-error {
+    input {
+        background: #ff4949 !important;
+        border-color: #ff4949 !important;
+        background-color: #f7a1a4 !important;
+    }
+}
+/deep/.el-form-item.is-error:hover {
+    .el-form-item__error {
+        visibility: visible;
+        width: 1000px;
+        z-index: 10000;
+    }
+}
+/deep/.el-form-item__error {
+    visibility: hidden;
+}

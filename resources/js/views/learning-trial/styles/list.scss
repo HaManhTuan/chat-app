@@ -1,0 +1,57 @@
+@import '@/styles/trial/common.scss';
+@import '../../../styles/trial/list-table.scss';
+.page-body {
+  height: calc(100vh - 236px);
+}
+/deep/ thead {
+  th:nth-child(5),
+  th:nth-child(11),
+  th:nth-child(18) {
+    .cell {
+      font-size: 9px;
+    }
+  }
+}
+
+/deep/ tbody {
+  td:first-child,
+  td:nth-last-child(3) {
+    padding-right: 10px;
+  }
+}
+/deep/.el-date-editor.is-disabled .el-input__inner {
+  background-color: #f0f0f0 !important;
+}
+/deep/ .el-table {
+  .el-table__fixed::before,
+  .el-table__fixed-right::before {
+    display: none;
+  }
+  thead {
+    th:nth-child(20) {
+      text-align: left;
+      border-left: 1px solid #d6d6d6;
+      padding-left: 9px !important;
+    }
+    th:last-child {
+      //border-left: none;
+      padding-left: 11px !important;
+    }
+  }
+  tbody {
+    .el-input__suffix {
+      right: 0;
+    }
+    td:last-child {
+      //border-left: none !important;
+      padding-left: 0px !important;
+    }
+    td:nth-child(20) {
+      padding-left: 0px !important;
+      border-left: 1px solid #d6d6d6;
+    }
+  }
+}
+/deep/ .el-select-dropdown {
+  left: 5px !important;
+}

@@ -1,0 +1,141 @@
+.tab-custom {
+    .card-body ::v-deep {
+        padding: 25px 35px 35px;
+
+        .card-body__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: -7px;
+
+            h3 {
+                margin: 0;
+            }
+
+            .title {
+                button {
+                    padding: 5px 20px;
+                    border-radius: 100px;
+                    background: #f8f8f8;
+                    color: #1A1714;
+                    font-family: Noto Sans JP, serif;
+                    font-size: 15px;
+
+                    .tx-green {
+                        color: #1467B3;
+                        vertical-align: revert;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    i {
+                        vertical-align: middle;
+                        font-size: 22px;
+                        color: #1467B3;
+                    }
+
+                    span {
+                        vertical-align: middle;
+                        font-weight: 500 !important;
+                    }
+                }
+
+                .el-button + .el-button {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .card-body__content {
+            margin-top: 15px;
+            height: 170px;
+            // custom table
+            .el-table {
+                .cell {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+
+            .table-content {
+                border-left: 1px solid #d6d6d6;
+                border-right: 1px solid #d6d6d6;
+                border-top: 1px solid #d6d6d6;
+                border-bottom: 1px solid #d6d6d6;
+                height: 166px;
+
+                &:before {
+                    display: none;
+                }
+
+                .el-table__body-wrapper.is-scrolling-none {
+                    height: 406px;
+                }
+
+                table {
+                    th {
+                        color: #FFFFFF;
+                        padding: 0 20px;
+                        height: 30px;
+                        background: #535353;
+                        border-bottom: 1px solid #d6d6d6;
+                        font-size: 13px;
+                        font-family: Noto Sans JP;
+                        font-weight: 400;
+                    }
+
+                    td {
+                        border-bottom: 1px solid #d6d6d6;
+                        padding: 7px 10px 7px 17px;
+                        font-size: 14px;
+                        height: 49px;
+                    }
+
+                    button.btn-edit {
+                        background: #f4f8fd;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        padding: 0;
+                        border: none;
+                        margin-right: 10px;
+                        color: #1467b3;
+                        vertical-align: middle;
+
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-body__footer {
+            // custom pagination
+            .custom-pagination {
+                margin-top: 10px;
+                margin-bottom: 20px;
+
+                &.last {
+                    margin-top: 10px;
+                    margin-bottom: 30px;
+                }
+
+                button.btn-prev, button.btn-next {
+                    background: none;
+                }
+            }
+        }
+
+        //.second-table{
+        //    height: 258px !important;
+        //}
+    }
+}

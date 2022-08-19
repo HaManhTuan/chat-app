@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.76" height="17.001" viewBox="0 0 14.76 17.001">
+  <g id="Group_1732" data-name="Group 1732" transform="translate(-575.956 -236.061)">
+    <g id="グループ_352" data-name="グループ 352" transform="translate(580.888 241.622)">
+      <line id="線_2" data-name="線 2" y1="6.8" transform="translate(2.449)" fill="none" stroke="#1467b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="パス_60" data-name="パス 60" d="M582.373,249.536l2.449,2.331,2.449-2.331" transform="translate(-582.373 -245.042)" fill="none" stroke="#1467b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Group_1731" data-name="Group 1731" transform="translate(576.956 237.061)">
+      <path id="Path_361" data-name="Path 361" d="M585.585,237.061H577.9a.941.941,0,0,0-.941.941v13.119a.94.94,0,0,0,.941.941h10.878a.94.94,0,0,0,.941-.941v-9.929a.941.941,0,0,0-.276-.665l-3.19-3.19A.94.94,0,0,0,585.585,237.061Z" transform="translate(-576.956 -237.061)" fill="none" stroke="#1467b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_362" data-name="Path 362" d="M589.382,237.734v3.191h3.19a.228.228,0,0,0,.161-.39l-2.962-2.962A.228.228,0,0,0,589.382,237.734Z" transform="translate(-580.363 -237.183)" fill="#1467b3" stroke="#1467b3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

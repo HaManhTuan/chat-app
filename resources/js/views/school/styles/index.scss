@@ -1,0 +1,62 @@
+@import '../../../styles/trial/index.scss';
+/deep/ .search {
+
+  .el-row {
+    &.top{
+      .el-col:first-child {
+          .el-input {
+              width: calc(174px);
+          }
+      }
+      .el-col:nth-child(2) {
+          .el-input {
+              width: calc(135px);
+          }
+      }
+      .el-col:nth-child(3) {
+          .el-input {
+              width: calc(135px);
+          }
+      }
+      .el-col:nth-child(4) {
+          .el-input {
+              width: calc(135px);
+          }
+      }
+      .el-col:nth-child(5) {
+          .el-input {
+              width: calc(135px);
+          }
+      }
+  }
+    &.bot {
+        .el-col {
+            margin-right: 7px;
+        }
+        .el-form-item {
+            margin-bottom: 0 !important;
+            .el-input input {
+                width: 174px;
+            }
+        }
+        .el-col:nth-child(3) {
+            .el-input {
+                width: 135px;
+                input{
+                    width: 135px;
+                }
+            }
+        }
+
+      .el-col:nth-child(5) {
+        float: right;
+        .el-form-item__content {
+          text-align: right;
+          width: 100%;
+        }
+        position: absolute;
+        right: -22px;
+      }
+    }
+  }
+}

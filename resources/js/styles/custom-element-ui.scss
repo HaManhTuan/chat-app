@@ -1,0 +1,332 @@
+/*  */
+input,
+textarea {
+  border: 1px solid #1a1714 !important;
+  border-radius: 6px !important;
+}
+.el-textarea__inner {
+  color: #1a1714 !important;
+}
+
+.el-date-editor {
+  width: 100% !important;
+
+  .el-input__prefix {
+    left: unset !important;
+    right: 5px !important;
+  }
+
+  .el-input__suffix {
+    //left: 5px !important;
+    //right: unset !important;
+    right: 32px !important;
+  }
+}
+
+.el-select {
+  width: 100% !important;
+
+  .el-input .el-select__caret::before {
+    content: '\e78f' !important;
+    color: #1a1714;
+  }
+}
+
+.el-form-item {
+  .el-date-editor {
+    .el-input__inner {
+      padding-left: 15px;
+    }
+  }
+}
+
+.el-icon-date:before {
+  color: #1a1714;
+}
+
+//custom pagination
+.pagination-container {
+  .el-pagination {
+    padding: 0;
+  }
+
+  .el-pager {
+    li {
+      background-color: #ffffff !important;
+      height: 26px;
+      line-height: 26px;
+      min-width: 26px !important;
+      font-size: 13px;
+
+      &.active {
+        background: #5b8fbf !important;
+        border-color: #1467b3;
+      }
+
+      &.active:hover {
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  button.btn-prev,
+  button.btn-next {
+    width: 26px;
+    height: 26px;
+    min-width: 26px !important;
+
+    span {
+      font-size: 18px;
+      color: #1a1714;
+      min-width: 26px !important;
+      height: 26px !important;
+      line-height: 23px;
+      font-family: Noto Sans JP, sans-serif;
+    }
+  }
+}
+
+.el-input.is-disabled {
+  .el-input__inner {
+    background-color: #f0f0f0 !important;
+    color: #7b7b7b !important;
+  }
+
+  input[disabled='disabled'] {
+    border: #f0f0f0 !important;
+  }
+
+  i:before {
+    color: #7b7b7b !important;
+  }
+}
+
+// custom message error
+.el-form-item__error {
+  padding-left: 4px;
+  font-size: 10px !important;
+  padding-top: 1px !important;
+}
+
+// custom required
+label.el-form-item__label {
+  &:before {
+    color: #c70000 !important;
+    font-size: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+  }
+}
+
+.el-table .caret-wrapper {
+  background-color: #7b7b7b !important;
+  border-radius: 3px;
+  position: relative;
+  width: 14px !important;
+  height: 20px !important;
+  left: 6px !important;
+  top: -1px !important;
+
+  .ascending {
+    top: -2px !important;
+    left: 2px !important;
+    border-bottom-color: #ffffff;
+  }
+
+  .descending {
+    bottom: -3px !important;
+    left: 2px !important;
+    border-top-color: #ffffff;
+  }
+}
+.el-message {
+  z-index: 900000 !important;
+}
+
+.el-button--primary {
+  color: #ffffff;
+  background-color: #1467b3 !important;
+  border-color: #1467b3 !important;
+}
+
+.error-icon-status {
+  color: red;
+  font-size: 24px !important;
+  padding-right: 12px;
+  position: relative;
+  left: 0;
+  top: 3px;
+}
+
+.multiselect {
+  color: #1a1714;
+
+  .el-tag {
+    font-size: 9px;
+  }
+
+  .el-select__tags {
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+  }
+}
+
+.el-icon-circle-close::before {
+  color: #1a1714 !important;
+  font-size: 20px;
+}
+
+/deep/ .el-table__fixed::before,
+.el-table__fixed-right::before {
+  background-color: unset !important;
+}
+
+.remove-mb-el-select {
+  .el-select-dropdown {
+    .el-select-dropdown__wrap {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.no-border-date {
+  .el-date-editor input.el-input__inner {
+    background: #f0f0f0 0 0 no-repeat padding-box;
+    border-radius: 6px !important;
+    border: none !important;
+  }
+
+  ::placeholder {
+    text-align: left;
+    font: normal normal normal 15px/45px Noto Sans JP;
+    letter-spacing: 0.24px;
+    color: #7b7b7b !important;
+    opacity: 1;
+  }
+}
+
+.mt-2 {
+  margin-top: 20px !important;
+}
+
+.mt-3 {
+  margin-top: 30px !important;
+}
+.mb-3 {
+  margin-bottom: 30px !important;
+}
+.pb-2 {
+  padding-bottom: 20px !important;
+}
+.el-select-dropdown__item{
+    max-width: 400px;
+}
+.select-inside-table {
+  .el-select-dropdown__item {
+    color: #1a1714;
+      max-width: unset;
+  }
+
+  .el-scrollbar__wrap {
+    overflow: scroll !important;
+  }
+}
+
+// custom scroll
+.scroll-content {
+  .el-scrollbar__wrap {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .el-scrollbar__bar {
+    &.is-vertical {
+      .el-scrollbar__thumb {
+        background: #888888;
+        width: 8px;
+        left: 0;
+        top: 0;
+
+        &:hover {
+          background: #888888;
+        }
+      }
+    }
+
+    &.is-horizontal {
+      display: none;
+    }
+  }
+}
+
+.custom-textarea-scroll {
+  textarea {
+    padding-right: 20px;
+  }
+  textarea::-webkit-scrollbar {
+    width: 14px;
+    background-color: white;
+    border-radius: 25px;
+  }
+  textarea::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    background-color: #c2d1e0;
+  }
+}
+
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus {
+  border-color: #ff4949 !important;
+  background-color: #f7a1a4;
+}
+
+//remove button up, down at input number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.el-select-dropdown__empty {
+  margin: 10px !important;
+  min-width: 142px;
+  padding: 0 !important;
+  line-height: 15px !important;
+}
+
+.small-select-text {
+  .el-input {
+    input {
+      font-size: 8px !important;
+    }
+  }
+}
+
+body.el-popup-parent--hidden {
+  padding-right: 0 !important;
+}
+.small-select-font {
+  input.el-input__inner {
+    font-size: 8px !important;
+  }
+}
+.el-message-box {
+  .el-message-box__btns {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 31px 14px 16px !important;
+    text-align: right;
+    .el-button:first-child {
+      margin-left: 10px;
+    }
+  }
+}

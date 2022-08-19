@@ -1,0 +1,10 @@
+const schoolStatus = {
+  PRIMARY_SCHOOL_TYPE: 1,
+  JUNIOR_SCHOOL_TYPE: 2,
+  HIGH_SCHOOL_TYPE: 3,
+  HIGH_SCHOOL_GRADUATE_OR_ABOVE_TYPE: 4,
+  TODDLER_SCHOOL_TYPE: 8,
+  GENERAL_SCHOOL_TYPE: 9,
+};
+
+export default schoolStatus;

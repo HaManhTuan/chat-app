@@ -1,0 +1,52 @@
+@import '@/styles/trial/common.scss';
+@import '../../../styles/trial/list-table.scss';
+.page-body {
+  height: calc(100vh - 236px);
+}
+
+/deep/ .el-table__body-wrapper {
+    overflow-y: auto;
+}
+.icon-input__calendar{
+    cursor: pointer;
+}
+/deep/ thead {
+  th:nth-child(4),
+  th:nth-child(10) {
+    .cell {
+      font-size: 9px;
+    }
+  }
+}
+
+/deep/ tbody {
+  td:nth-child(7) {
+    .el-form-item {
+      width: 130px;
+    }
+  }
+  /deep/ tbody {
+    td:first-child,
+    td:nth-last-child(2) {
+      padding-right: 10px;
+    }
+  }
+}
+
+/deep/ .el-table {
+  thead {
+    th:last-child {
+      border-left: none;
+      padding-left: 15px !important;
+    }
+  }
+  tbody {
+    td:last-child {
+      border-left: none !important;
+      padding-left: 0px !important;
+    }
+      .el-input__suffix{
+          right: 0;
+      }
+  }
+}

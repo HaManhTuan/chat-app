@@ -1,0 +1,162 @@
+.icon-input__calendar{
+    position: absolute;
+    top: 0;
+    right: 11px;
+}
+.custom-dialog::v-deep {
+    .el-dialog {
+        width: 1060px;
+        height: 638px;
+        border-radius: 25px;
+
+        .el-dialog__header {
+            padding: 53px 0 0 74px;
+            font-family: Noto Sans JP, sans-serif;
+            .el-dialog__title{
+                color: #1a1714;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .el-dialog__headerbtn {
+                top: 28px;
+                right: -2px;
+
+                .el-dialog__close {
+                    font-size: 40px;
+                    color: #1A1714;
+                }
+
+                &:after {
+                    content: '閉じる';
+                    position: relative;
+                    top: 15px;
+                    right: 36px;
+                    font-size: 11px;
+                    font-family: Noto Sans JP,sans-serif;
+                    color: #1A1714;
+                }
+            }
+        }
+
+        .el-dialog__body {
+            padding: 40px 40px 0 40px;
+
+            .el-form-item.el-form-item--medium {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 13px;
+
+                label.el-form-item__label {
+                    line-height: 36px !important;
+                    padding-left: 18px;
+                    font-weight: 500;
+                    color: #000000;
+                }
+
+                &.custom-date {
+                    .el-form-item__content {
+                        display: flex;
+                        flex-direction: column;
+
+                        & > span.des {
+                            height: 25px;
+                            font-size: 13px;
+                            color: #1a1714;
+                            margin-top: -4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .el-dialog__footer {
+            padding: 0 30px 37px 55px;
+            margin-top: 5px;
+            .dialog-footer.custom-footer__button {
+                .el-button + .el-button {
+                    margin-left: 15px !important;
+                    width: fit-content;
+                }
+                button.pd-0  {
+                    span {
+                        padding-left: 0;
+                    }
+                }
+                button {
+                    border-radius: 100px;
+                    color: #fff;
+                    height: 45px;
+                    width: 105px;
+                    border:none;
+
+                    span {
+                        font-size: 15px;
+                        font-family: Noto Sans JP,sans-serif;
+                        padding-left: 4px;
+                    }
+
+                    &.cancel {
+                        background: #6A6A6A;
+                        border-color: #707070;
+                        margin-right: 0;
+                    }
+
+                    &.delete {
+                        background: #343434;
+                        border-color: #707070;
+                    }
+                    svg {
+                        font-size: 18px;
+                        vertical-align: -3px;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/deep/ .select-inside-table {
+    .el-select-dropdown__item {
+        width: 278px;
+    }
+
+    .el-scrollbar__wrap {
+        overflow: scroll !important;
+    }
+}
+// custom scroll selectbox
+/deep/ .select-inside-table {
+    min-width: 280px;
+    position: absolute !important;
+    left: 584px;
+    transform-origin: center top;
+    z-index: 2003;
+    .el-select-dropdown__item {
+        &.selected{
+            .el-checkbox__inner{
+                &::after{
+                    border-color: #1890ff;
+                }
+            }
+        }
+    }
+
+    .el-scrollbar__bar {
+        &.is-vertical {
+            .el-scrollbar__thumb {
+                background: #888888;
+                width: 8px;
+                left: 0;
+                top: 0;
+
+                &:hover {
+                    background: #888888;
+                }
+            }
+        }
+    }
+}

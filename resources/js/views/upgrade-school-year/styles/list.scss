@@ -1,0 +1,61 @@
+@import '@/styles/trial/common.scss';
+@import '../../../styles/trial/list-table.scss';
+
+.popper-container {
+  .page-body {
+    height: calc(100vh - 236px);
+  }
+}
+/deep/ thead {
+  th:nth-child(6) {
+    .cell {
+      font-size: 9px;
+    }
+  }
+}
+
+/deep/ tbody {
+  td:first-child,
+  td:nth-last-child(3) {
+    padding-right: 10px;
+  }
+  td:last-child {
+    input.el-input__inner {
+      border: none !important;
+      background-color: transparent;
+    }
+  }
+}
+
+/deep/ .el-table {
+  thead {
+    th:nth-child(15) {
+      text-align: left;
+      border-left: 1px solid #d6d6d6;
+      padding-left: 9px !important;
+    }
+    th:last-child {
+      border-left: none;
+      padding-left: 11px !important;
+    }
+  }
+  tbody {
+    td:last-child {
+      border-left: none !important;
+      padding-left: 0px !important;
+    }
+    td:nth-child(15) {
+      border-left: 1px solid #d6d6d6;
+      padding-left: 0px !important;
+    }
+  }
+}
+/deep/ .el-select-dropdown {
+  left: 5px !important;
+}
+/deep/ .el-checkbox__input {
+  .el-checkbox__inner {
+    width: 19px;
+    height: 19px;
+  }
+}

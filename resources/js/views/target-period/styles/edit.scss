@@ -1,0 +1,120 @@
+/deep/ .el-input__inner {
+    height: 36px;
+}
+
+.tab-custom {
+    height: calc(100% - 62px);
+
+    /deep/ .el-tabs__content {
+        height: calc(100% - 41px);
+
+        .el-tab-pane {
+            height: 100%;
+
+            .scroll-content {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.app-container::v-deep {
+    .tab-custom {
+        border: none;
+        box-shadow: none;
+
+        & > .el-tabs__header {
+            background-color: #f0f0f0;
+            border: none;
+
+            .el-tabs__nav {
+                width: 100%;
+                display: flex;
+
+                .el-tabs__item.is-top {
+                    font-size: 15px;
+                    font-weight: 400;
+                    background: #898989;
+                    color: #e0e0e0;
+                    height: 43px;
+                    line-height: 43px;
+                    width: 112px;
+                    text-align: center;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    border: none;
+                    padding: 0;
+
+                    &:first-child {
+                        border-top-left-radius: 8px;
+                    }
+
+                    &:hover {
+                        background: #525252;
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    &.is-active {
+                        background: #ffffff;
+                        color: #1467B3;
+                        font-family: Noto Sans JP, sans-serif;
+                        font-weight: 500 !important;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            transform: translateX(-50%);
+                            width: 59px;
+                            border-bottom: 4px solid #1467B3;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .el-tabs__content {
+            padding: 0;
+        }
+
+        .card-body {
+            h3 {
+                font-size: 18px;
+                font-weight: 500 !important;
+                color: #1A1714;
+                margin: 0;
+                padding-bottom: 20px;
+                font-family: Noto Sans JP, sans-serif;
+                font-weight: normal;
+            }
+
+            padding: 20px 30px 0;
+
+            .el-col.el-col-12 {
+                padding-right: 60px;
+            }
+
+            .el-form-item__label {
+                padding: 0 10px 0 0;
+            }
+        }
+    }
+
+    .group-button {
+        display: flex;
+        justify-content: flex-end;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 17px 0 0 0;
+    }
+
+    .line {
+        border-top: 1px solid #d6d6d6;
+    }
+}
+
+

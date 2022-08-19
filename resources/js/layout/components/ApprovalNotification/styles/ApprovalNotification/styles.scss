@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .box {
+    background-color: white;
+    height: 37px;
+    width: 57px;
+    border-radius: 5px;
+    svg.top-icon {
+      cursor: pointer;
+      height: 31px;
+      width: 31px;
+      color: #000000;
+    }
+    .notification {
+      display: inline-block;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #c70000;
+      border-radius: 50px;
+      right: 12px;
+      top: 12px;
+    }
+  }
+}

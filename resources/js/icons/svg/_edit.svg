@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f8fd;
+      }
+
+      .cls-2 {
+        fill: #1467b3;
+      }
+    </style>
+  </defs>
+  <g id="Group_589" data-name="Group 589" transform="translate(13908 20881)">
+    <rect id="Rectangle_1889" data-name="Rectangle 1889" class="cls-1" width="30" height="30" rx="6" transform="translate(-13908 -20881)"/>
+    <g id="定番ペンのフリーアイコン素材" transform="translate(-13901 -20874)">
+      <path id="Path_115" data-name="Path 115" class="cls-2" d="M5.122,55.037l.057-.057L11.2,48.958l.062-.062.062-.062,3.191-3.191a0,0,0,0,0,0,0l-3.561-3.561h0L7.762,45.27l-.062.062-.062.062L1.558,51.473h0L0,56.593a0,0,0,0,0,0,0L5.045,55.06Zm-3.986.421L1.914,52.9h0l1.778,1.778a0,0,0,0,1,0,0l-2.556.778A0,0,0,0,1,1.136,55.457Z" transform="translate(0 -40.792)"/>
+      <path id="Path_116" data-name="Path 116" class="cls-2" d="M387.829,3.694a1.021,1.021,0,0,0,0-1.44L386.352.777a1.021,1.021,0,0,0-1.44,0l-.738.738a0,0,0,0,0,0,0l2.915,2.915h0Z" transform="translate(-372.294 -0.48)"/>
+    </g>
+  </g>
+</svg>

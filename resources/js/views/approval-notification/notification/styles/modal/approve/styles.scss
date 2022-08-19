@@ -1,0 +1,244 @@
+.title-2 {
+    color: #1a1714;
+    margin: 0 21px 0 21px !important;
+}
+
+.btn-cancel-fee {
+    width: 145px !important;
+    margin-right: 6px !important;
+}
+
+.btn-approve-fee {
+    margin-left: 21px !important;
+}
+
+.hr-modal-role {
+    border: 1px solid #D6D6D6;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 910px;
+    float: left;
+}
+
+.custom-dialog-t::v-deep {
+    .w-100 {
+        width: 100% !important;
+    }
+
+    .d-flex {
+        display: flex !important;
+    }
+
+    .el-dialog {
+        width: 1060px;
+        height: 642px !important;
+        border-radius: 25px;
+        padding-bottom: 15px !important;
+        text-align: left !important;
+        margin-top: 15vh !important;
+
+        .el-dialog__header {
+            padding: 55px 0 16px 74px !important;
+            font-weight: 500 !important;
+            font-family: Noto Sans JP, sans-serif;
+
+            .el-dialog__title {
+                color: #1a1714;
+                font-size: 20px;
+                display: flex !important;
+            }
+
+            .el-dialog__headerbtn {
+                top: 28px;
+                right: -2px;
+
+                .el-dialog__close {
+                    font-size: 40px;
+                    color: #1A1714;
+                }
+
+                &:after {
+                    content: '閉じる';
+                    position: relative;
+                    top: 15px;
+                    right: 36px;
+                    font-size: 11px;
+                    font-family: Noto Sans JP, sans-serif;
+                }
+            }
+        }
+
+        .el-dialog__body {
+            padding: 0px 31px 0px 74px !important;
+            opacity: 1;
+
+            .el-form-item.el-form-item--medium {
+                margin-bottom: 13px !important;
+
+                .el-form-item__label {
+                    line-height: 36px !important;
+                    font-weight: 400;
+                    color: #000000;
+                    padding: 0px !important;
+                    width: 135px;
+                }
+
+                .el-form-item__content {
+                    line-height: normal !important;
+
+                    .el-input {
+                        width: 223px !important;
+                        margin-left: 12px;
+
+                        .el-input__inner {
+                            height: 36px;
+                            width: 225px;
+                        }
+                    }
+                }
+            }
+
+            .form-above {
+                margin: 6px 21px 3px 21px;
+
+                .form-above_label {
+                    .el-form-item__content {
+                        width: 100% !important;
+                    }
+                }
+
+                .form-above_item {
+                    width: fit-content;
+                    margin-right: 0;
+
+                    .el-form-item__content {
+                        width: fit-content;
+                        margin-right: 0;
+                    }
+                }
+
+                .err-first {
+                    .el-form-item__error {
+                        padding-left: 155px;
+                        width: 405px;
+                    }
+                }
+
+                .err-second {
+                    .el-form-item__error {
+                        padding-left: 13px;
+                    }
+                }
+
+                .label-above {
+                    line-height: normal !important;
+                    margin: 0;
+                    width: 225px;
+                    display: inline-block;
+                    font: normal normal normal 14px/45px Hiragino Sans;
+                    color: #1A1714;
+                    opacity: 1;
+                    padding-left: 7px;
+                }
+
+                .label-above:nth-child(1) {
+                    margin-left: 153px;
+                }
+
+                .label-above:nth-child(2) {
+                    margin-left: 20px;
+                }
+
+                .el-form-item--medium {
+                    .el-form-item__label {
+                        width: 140px !important;
+                    }
+
+                    .el-form-item__content {
+                        width: 378px;
+                        margin-right: 19px;
+                    }
+                }
+            }
+
+            .form-below {
+                width: 912px;
+                height: 155px;
+                display: flex;
+                flex-direction: row;
+
+                .tag {
+                    height: 188px;
+                    width: 300px;
+                    background-color: #f4f8fc;
+                    border-radius: 12px;
+                    margin-right: 10px;
+                    padding: 19px;
+
+                    .tag-label {
+                        .tag-label_label {
+                            font: normal normal normal 18px/45px Hiragino Sans;
+                            color: #1467B3;
+                            opacity: 1;
+                            margin: 0 0 11px 0;
+                            line-height: inherit;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .tag-content {
+                        .el-form-item.el-form-item--medium {
+                            margin-bottom: 13px;
+                            padding-bottom: 14px;
+
+                            .el-form-item__label {
+                                line-height: 36px !important;
+                                font-weight: 400;
+                                color: #000000;
+                                padding: 0px;
+                                width: 140px;
+                            }
+
+                            .el-form-item__content {
+                                line-height: normal !important;
+
+                                .el-input {
+                                    width: 107px !important;
+                                    margin-left: 10px;
+
+                                    .el-input__inner {
+                                        height: 36px;
+                                        width: 107px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .err-first {
+                            .el-form-item__error {
+                                padding-left: 155px;
+                                width: 274px;
+                            }
+                        }
+
+                        .err-second {
+                            .el-form-item__error {
+                                padding-left: 155px;
+                                width: 274px;
+                            }
+                        }
+                    }
+                }
+
+                .tag:nth-child(3) {
+                    margin-right: 0 !important;
+                }
+            }
+
+            .form-footer {
+                margin: 54px 0 10px 0;
+            }
+        }
+    }
+}

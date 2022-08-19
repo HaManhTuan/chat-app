@@ -1,0 +1,259 @@
+/deep/ .scroll-content{
+    height: calc(100% - 50px);
+    .el-scrollbar__wrap {
+        overflow-x: hidden;
+    }
+}
+.card-body::v-deep{
+    border-bottom: 1px solid #D6D6D6;
+    &:last-child{
+        border-bottom: none;
+    }
+    border-top: none;
+    margin-bottom: 0px;
+    .el-col-7 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .el-col-8 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .el-col-9 {
+        padding-left: 23px !important;
+        padding-right: 0px !important;
+    }
+    .el-form-item{
+        margin-bottom: 20px;
+        label.el-form-item__label
+        {
+            text-align: right;
+            padding-left: 0px;
+        }
+    }
+    .el-card__body{
+        padding: 20px 30px;
+    }
+    .card-header{
+        margin-bottom: 20px;
+        span {
+            font-size: 18px;
+            color: #1a1714;
+            font-family: Noto Sans JP, sans-serif;
+        }
+    }
+    .el-table{
+        td {
+            border-bottom: none;
+        }
+        th.is-leaf,
+        tr {
+            border-bottom: none;
+        }
+        .cell {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        thead {
+            .cell {
+                color: #1a1714 !important;
+                font-size: 14px;
+            }
+            tr {
+                th:first-child,
+                th:nth-child(2),
+                th:nth-child(3),
+                th:nth-child(4) {
+                    .cell::before {
+                        content: '*';
+                        color: #C70000 !important;
+                        font-size: 20px;
+                        font-weight: 400;
+                        vertical-align: middle;
+                    }
+                }
+
+            }
+        }
+    }
+    .btn-create {
+        border-radius: 25px;
+        margin-top: 10px;
+        background: #F8F8F8 0% 0% no-repeat padding-box !important;
+        border: 1px solid #D6D6D6;
+        span {
+            font-size: 15px;
+            font-family: Noto Sans JP, serif;
+            padding-left: 1px;
+            color: black;
+        }
+
+        i {
+            font-size: 22px !important;
+            vertical-align: -3px;
+            border-radius: 100%;
+            color: #1467B3 !important;
+            background-color: white !important;
+        }
+    }
+    .btn-create.btn-subject.button-subject-code-column {
+        width: 934px;
+        margin-bottom: 20px;
+    }
+    .btn-create.btn-subject.button-no-subject-code-column {
+        width: 709px;
+        margin-bottom: 20px;
+    }
+    .btn-create.btn-discount {
+        width: 411px;
+        margin-bottom: 20px;
+    }
+    .el-table::before {
+        display: none!important;
+    }
+    .el-table__body tr.current-row > td {
+        background-color: unset;
+    }
+}
+.icon-input__calendar {
+    position: absolute;
+    top: 0;
+    right: 11px;
+    pointer-events: none;
+}
+.cantractinfo-form {
+    min-height: calc(100% - 108px);
+
+}
+/deep/.cantractinfo-detail {
+    .el-row {
+        height: 62px;
+    }
+    .el-select {
+        width: 225px !important;
+    }
+    .el-input {
+        width: 225px !important;
+        line-height: 36px;
+        height: 36px;
+        border-radius: 6px!important;
+        &:disabled{
+            background: #F0F0F0 0% 0% no-repeat padding-box;
+        }
+    }
+    .el-col-8 .el-form-item {
+        width: 365px;
+    }
+    .el-col-7 .el-form-item {
+        width: 307px;
+    }
+}
+/deep/.subject-table {
+    .el-input {
+        width: 210px;
+    }
+    .el-col-24 {
+        width: 225px;
+    }
+    .el-form-item__content {
+        margin-left: 0!important;
+    }
+    .el-table__empty-block {
+        display: none;
+    }
+    .el-table td {
+        padding: 0 0 0 10px;
+    }
+    .el-table_1_column_5 is-center {
+        padding-bottom: 10px;
+    }
+
+    .el-form-item {
+        margin-bottom: 0px;
+    }
+    .el-row {
+        display: flex;
+    }
+    .header-label {
+        .el-form-item{
+            label.el-form-item__label {
+                text-align: left;
+                color: #1a1714 !important;
+                font-size: 14px;
+                font-weight: 500 !important;
+
+            }
+        }
+        .required label::before {
+            content: '*';
+            color: #C70000 !important;
+            font-size: 20px;
+            font-weight: 400;
+            vertical-align: middle;
+        }
+    }
+    .body-container {
+        .el-row {
+            margin-bottom: 20px;
+        }
+
+    }
+}
+/deep/ button.btn-delete {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    padding: 0;
+    border: none;
+    margin-right: 10px;
+    color: #1467b3;
+    vertical-align: middle;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+    background: #f4f8fd;
+}
+
+/deep/ .default-rows {
+    thead {
+        display: none;
+    }
+}
+/deep/.discounts {
+    width: 411px !important;
+    .el-input {
+        width: 356px;
+    }
+    .el-form-item__error {
+        width: 356px;
+    }
+
+}
+.el-checkbox__inner {
+    background: none !important;
+    border: none !important;
+
+    &:after {
+        border-color: #1a1714 !important;
+        border-width: 4px !important;
+        top: 0 !important;
+        width: 8px !important;
+        height: 15px !important;
+        left: 0;
+        transform: rotate(45deg) scaleY(1);
+        box-sizing: content-box;
+        content: '';
+    }
+}
+.d-flex {
+    display: flex;
+}
+/deep/.ml-24 {
+    margin-left: 24px !important;
+}

@@ -1,0 +1,56 @@
+/deep/ .el-form {
+  height: 100%;
+  .top {
+    .el-col {
+      margin-right: 15px;
+      &:nth-child(1) {
+        width: 219px;
+      }
+      &:nth-child(2) {
+        width: 240px;
+        margin-right: 10px;
+      }
+      &:nth-child(3) {
+        width: 216px;
+        .el-input__inner {
+          border-color: #c7c7c7 !important;
+          background-color: #f0f0f0;
+        }
+      }
+      &:nth-child(4) {
+        width: 189px;
+        .el-input__inner {
+          border-color: #c7c7c7 !important;
+          background-color: #f0f0f0;
+        }
+      }
+      &:nth-child(5) {
+        float: right;
+        .el-form-item__content {
+          text-align: right;
+          width: 100%;
+        }
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin-right: 0px;
+      }
+
+      .el-form-item {
+        margin: 0px;
+        .el-form-item__content {
+          .el-input {
+            width: 100%;
+          }
+          .multiselect {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/deep/ .icon-input__calendar {
+  top: 9px;
+}

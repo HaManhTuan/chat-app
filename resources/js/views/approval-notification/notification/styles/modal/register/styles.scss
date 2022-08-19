@@ -1,0 +1,27 @@
+/deep/ .el-table__body-wrapper {
+  overflow-y: auto;
+}
+/deep/ .search-container.popper {
+  &:after {
+    background-color: #ffffff;
+  }
+}
+
+/deep/ .el-table__body {
+  .el-button {
+    border: none;
+  }
+}
+
+/deep/ .container {
+  .page-body {
+    height: calc(100vh - 249px - 79px);
+  }
+}
+
+/deep/ .el-card {
+  border: none;
+  .el-card__body {
+    background: #f4f8fc;
+  }
+}

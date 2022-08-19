@@ -1,0 +1,41 @@
+@import '../../../styles/trial/index.scss';
+/deep/ .search {
+  .el-row {
+    &.bot {
+      .el-col:first-child {
+        width: calc(42px + 15px + 174px - 30px);
+        .el-input {
+          width: calc(174px - 30px);
+        }
+      }
+      .el-col:nth-child(2) {
+        width: calc(71px + 15px + 174px - 30px);
+        .el-input {
+          width: calc(174px - 30px);
+        }
+      }
+      .el-col:nth-child(3) {
+        width: calc(99px + 15px + 174px - 20px);
+        .el-input {
+          width: 100%;
+        }
+      }
+      .el-col:nth-child(4) {
+        width: calc(99px + 15px + 124px - 20px);
+        .el-input {
+          width: calc(174px - 20px);
+        }
+      }
+      .el-col:nth-child(5) {
+        float: right;
+        .el-form-item__content {
+          text-align: right;
+          width: 100%;
+        }
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+      }
+    }
+  }
+}
